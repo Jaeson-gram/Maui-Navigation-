@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Navigations.MVVM.StartPage"
+             Title="StartPage">
+
+    <NavigationPage.TitleView>
+        <Frame Margin="10"
+               Padding="0"
+               CornerRadius="5">
+
+            <SearchBar Placeholder="Search Places" PlaceholderColor="Blue"/>
+        </Frame>
+    </NavigationPage.TitleView>
+    
+    <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
+
+        <Entry x:Name="profileName" Placeholder="profile Name"/>
+
+        <Button Text="Go To Page 2"
+                Clicked="Button_Clicked"
+                Command="{Binding Page1ToPage2}"/>
+
+
+        <!-- Refer to Navigation/Utilities/NavigationUtilities.RemovePage() -->
+        <Button Text="Go To Page 2 and remove this Page"
+                Clicked="Button_Clicked_1"/>
+
+        <!-- -->
+        <Button Text="Go To Modal Page"
+                Clicked="Button_Clicked_2"/>
+
+        <!-- Refer to StartPage.xaml.cs/Button_Clicked_2b (commented out button) -->
+        <!--<Button Text="Go To Modal Page"
+                Clicked="Button_Clicked_2b"/>-->
+
+
+    </VerticalStackLayout>
+</ContentPage>

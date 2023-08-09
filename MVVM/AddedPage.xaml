@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Navigations.MVVM.AddedPage"
+             Title="AddedPage">
+    <VerticalStackLayout Spacing="15">
+
+        <Label x:Name="ProfileName"/>
+
+        <Entry x:Name="NameEntry" Placeholder="Email"/>
+
+        <Entry x:Name="CommentEntry" Placeholder="Comment"/>
+
+        <Label 
+            Text="Added Page"
+            FontSize="60"/>
+
+        <Button Text="Complete Form"
+                WidthRequest="100"
+                Clicked="Button_Clicked"/>
+
+        <!--<Button Text="Page 2"
+                Clicked="Button_Clicked_1"/>-->
+    </VerticalStackLayout>
+</ContentPage>
